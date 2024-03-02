@@ -8,6 +8,16 @@ html, body {
     overflow: hidden; /* Prevent scrolling */
 }
 
+h1, h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#6e788e;
+  font-family: 'Century Gothic';
+  padding: 0%;
+  margin: 0%;
+}
+
 .container{
     padding: 20px 50vw;
     display: grid;
@@ -15,16 +25,23 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+.titlecontainer
+{
+  padding: 20px ;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 .icon-button {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px; /* Adjust height as needed */
     width: 300px; /* Adjust width as needed */
-    background-color: dodgerblue;
+    background-color: #04aa6d;
     border-radius: 30px;
     border: transparent;
-    color: #ffffff; /* Example text color */
+    color: #111828; /* Example text color */
     border: none;
     cursor: pointer;
   }
@@ -37,7 +54,7 @@ html, body {
   }
 
   .icon {
-    fill: #ffffff; /* Example icon color */
+    fill: #111828; /* Example icon color */
   }
   .icon-button:hover {
     filter: brightness(120%); /* Increase brightness by 20% */
@@ -50,7 +67,10 @@ html, body {
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-left:50vw;
+    margin-right:50vw;
     height: 300px;
+    width: 300px;
     background-color: white; /* White background */
     border-radius: 50%; /* Make it circular */
     overflow: hidden; /* Hide any overflowing content */
