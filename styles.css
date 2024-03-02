@@ -9,7 +9,7 @@ html, body {
 }
 
 .container{
-    padding: 50vh;
+    padding: 50%;
     padding-top: 20px;
     display: grid;
     row-gap: 10px;
