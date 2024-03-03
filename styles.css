@@ -101,11 +101,21 @@ position: fixed;
 display: none;
 bottom: 0;
 left: 0;
-width: 100%;
+width: 100vw;
 background-color: #04aa6d;
-padding: 50px;
+height: 100px;
 }
 
 #popuptext{
+  position: absolute;
+  vertical-align: middle;
+  justify-content: center;
+  align-content: center;
   color: white;
+  top: 50%;
+  white-space: pre;
+  width: 100%vh;
+  left: 50%;
+  right:50%;
+  bottom:50%;
 }

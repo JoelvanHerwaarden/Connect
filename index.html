@@ -27,7 +27,7 @@
 	</div>  
 	
 	<div class="container">
-		<button class="icon-button" id="showPopup" onclick="showPopupButton('joel.van.herwaarden@rhdhv.com copied!')">
+		<button class="icon-button" id="showPopup" onclick="copyToClipboard('joel.van.herwaarden@rhdhv.com')">
 			<span class="button-text">Mail me!</span>
 			<svg class="icon" width="30" height="30" viewBox="0 0 24 24">
 			<!-- Your SVG icon path here -->
@@ -56,7 +56,14 @@
 			<!-- Your SVG icon path here -->
 			<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
 		</button>
-	</div>
+    
+		<button class="icon-button" onclick="downloadResume()">
+			<span class="button-text">Download Resume</span>
+			<svg class="icon" width="30" height="30" viewBox="0 0 24 24">
+			<!-- Your SVG icon path here -->
+		  <path d="M14,2H6C4.89,2 4,2.89 4,4V20C4,21.11 4.89,22 6,22H18C19.11,22 20,21.11 20,20V8L14,2M12,19L8,15H10.5V12H13.5V15H16L12,19M13,9V3.5L18.5,9H13Z" /></svg>
+	  </button>
+  </div>
 	
 	<div id="popupContainer">
     <h3 id="popupText"></h3>
@@ -64,28 +71,33 @@
 
 
   <script>
-    function OpenLinkedIn() {
+    
+  function OpenLinkedIn() {
     const url = 'https://www.linkedin.com/in/joel-van-herwaarden/'; // Replace with your desired URL
     window.open(url, '_blank');
   }
-    function OpenGithub() {
+    
+  function OpenGithub() {
     const url = 'https://github.com/JoelvanHerwaarden'; // Replace with your desired URL
     window.open(url, '_blank');
   }
-    function CopyEmail() {
-    // Get the text field
-    var copyText = "joel.van.herwaarden@rhdhv.com";
-  
-    // Select the text field
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
-  
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
-  
-    // Alert the copied text
-    alert("Copied the text: " + copyText.value);
-  }
+    
+  function copyToClipboard(text) {
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+
+    // Select the text inside the input field
+    tempInput.select();
+    document.execCommand('copy'); // Copy the selected text to the clipboard
+
+    // Clean up: remove the temporary input element
+    document.body.removeChild(tempInput);
+
+    // Alert the user
+    showPopupButton(`Copied ${text}!`, '#04aa6d');
+}
   function Comingsoon() {
     // Alert the copied text
     alert("Coming Soon!");
@@ -108,6 +120,14 @@ function showPopupButton(text, color) {
         popupContainer.style.display = 'none';
     }, 2000);
 }
+function downloadResume() {
+            // Replace 'path_to_your_pdf.pdf' with the actual path to your PDF file
+            const pdfUrl = './Resources/Resume_Joel_van_Herwaarden.pdf';
+
+            // Trigger the download
+            // window.location.href = pdfUrl;
+            window.open(pdfUrl, '_blank');
+        }
   </script>
 </body>
 
