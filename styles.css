@@ -41,7 +41,7 @@ h1, h2{
     background-color: #04aa6d;
     border-radius: 30px;
     border: transparent;
-    color: #111828; /* Example text color */
+    color: white; /* Example text color */
     border: none;
     cursor: pointer;
   }
@@ -54,7 +54,7 @@ h1, h2{
   }
 
   .icon {
-    fill: #111828; /* Example icon color */
+    fill: white; /* Example icon color */
   }
   .icon-button:hover {
     filter: brightness(120%); /* Increase brightness by 20% */

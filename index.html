@@ -17,7 +17,7 @@
       </div>
 </div>  
 <div class="container">
-    <button class="icon-button">
+    <button class="icon-button" onclick="CopyEmail">
         <span class="button-text">Mail me!</span>
         <svg class="icon" width="30" height="30" viewBox="0 0 24 24">
           <!-- Your SVG icon path here -->
@@ -47,3 +47,21 @@
           <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
       </button>
 </div>
+
+
+<script>
+function CopyEmail() {
+  // Get the text field
+  var copyText = "joel.van.herwaarden@rhdhv.com";
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
