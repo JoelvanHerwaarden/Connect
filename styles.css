@@ -5,7 +5,6 @@ html{
 html, body {
     height: 100vh;
     margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrolling */
 }
 
 h1, h2{
